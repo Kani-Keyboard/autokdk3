@@ -2,8 +2,20 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/ {
+//* ==================== ZMK標準の「lt」と「mt」の挙動を直接上書き変更 ==================== */
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>; // 2連打ホールドでキーを連打リピート
+};
 
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>; // 2連打ホールドでキーを連打リピート
+};
+
+/ {
 /* ==================== コンボ設定ここから ==================== */
     combos {
         compatible = "zmk,combos";
@@ -44,9 +56,9 @@
         layer_0 {
             bindings =<
                 &kp Q         &kp W        &kp E     &kp R        &kp T                                  &kp Y      &kp U      &kp I      &kp O        &kp P
-				&mt LSHFT A   &kp S        &kp D     &kp F        &kp G        &kp ESC      &kp DEL      &kp H      &kp J      &kp K      &kp L        &lt LSHFT MINUS
-				&mt LCTRL Z   &lt LALT X   &kp C     &kp V        &kp B        &kp TAB      &kp BSPC     &kp N      &kp M      &kp COMMA  &lt LALT DOT &lt LCTRL QMARK
-				                           &kp LWIN  &lt 3 LANG2  &lt 3 SPACE  &lt 2 ENTER  &lt 1 LANG1
+				&mt LSHFT A   &kp S        &kp D     &kp F        &kp G        &kp ESC      &kp DEL      &kp H      &kp J      &kp K      &kp L        &mt LSHFT MINUS
+				&mt LCTRL Z   &mt LALT X   &kp C     &kp V        &kp B        &kp TAB      &kp BSPC     &kp N      &kp M      &kp COMMA  &mt LALT DOT &mt LCTRL QMARK
+				                           &kp LWIN  &lt 3 INT5   &lt 3 SPACE  &lt 2 ENTER  &lt 1 INT4
             >;
         };
 
