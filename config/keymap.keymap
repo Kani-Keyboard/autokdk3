@@ -64,10 +64,10 @@
 
         layer_1 {
             bindings =<
-                &kp DQT       &kp HASH   &kp DOLLAR &kp PERCENT   &kp AMPS                               &kp LPAR  &kp RPAR   &kp COLON  &kp BSLH      &kp SLASH
-				&kp GRAVE     &kp APOS   &kp INT3   &kp CARET     &kp PIPE     &kp AT      &kp ASTRK     &kp LBRC  &kp RBRC   &kp SEMI   &kp EQUAL     &kp UNDER
-				&none         &none      &kp LT     &none         &kp GT       &kp TILDE   &kp PLUS      &kp LBKT  &kp RBKT   &kp COMMA  &kp DOT       &kp EXCL
-				                                    &none         &none        &none       &none         &none
+				&kp LS(N2)    &kp HASH   &kp DOLLAR &kp PERCENT   &kp LS(N6)                              &kp LS(N8)    &kp LS(N9)    &kp SQT       &kp BSLH      &kp SLASH
+				&kp LS(AT)    &kp LS(N7) &kp INT3   &kp EQUAL     &kp PIPE     &kp LBKT      &kp ASTRK    &kp LS(RBKT)  &kp LS(BSLH)  &kp SEMI      &kp LS(MINUS) &kp UNDER
+				&none         &none      &kp LT     &none         &kp GT       &kp LS(EQUAL) &kp PLUS     &kp RBKT      &kp BSLH      &kp COMMA     &kp DOT       &kp EXCL
+                                                    &none         &none        &none         &none        &none
             >;
         };
 
